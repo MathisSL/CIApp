@@ -1,0 +1,10 @@
+tkinter
+customtkinter
+opencv-python-headless
+numpy
+Pillow
+requests
+pandas
+mediapipe
+firebase-admin
+matplotlib
