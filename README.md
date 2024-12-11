@@ -71,12 +71,12 @@ Je suis Mathis Sommacal, étudiant en Master 2 spécialisé en Intelligence Arti
    
 2. **Installation des dépendances** :
    ```bash
-   pip install mediapipe opencv-python numpy matplotlib
+   pip install mediapipe opencv-python numpy matplotlib tk customtkinter firebase-admin openpyxl
    ```
 
 3. **Exécution de l'application** :
    ```bash
-   python ciapp.py
+   python ciapp_beta.py
    ```
 
 ## Utilisation
