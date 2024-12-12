@@ -103,5 +103,13 @@ Je suis Mathis Sommacal, étudiant en Master 2 spécialisé en Intelligence Arti
 Les contributions sont les bienvenues ! Si vous souhaitez ajouter des fonctionnalités ou corriger des bugs, n’hésitez pas à soumettre une pull request ou à ouvrir une issue sur le dépôt GitHub.
 
 ## Licence
-Ce programme est distribué gratuitement pour la communauté.
+Ce programme est distribué gratuitement pour la communauté sous la licence BSD 3-Clause.
+
+Vous êtes libre d'utiliser, modifier et redistribuer ce programme, tant que vous respectez les conditions suivantes :
+
+    Mention des droits d'auteur : Vous devez conserver la notice de copyright présente dans le code source ou dans les documents associés.
+    Limitation d'utilisation des noms : Le nom du détenteur des droits d'auteur (Mathis Sommacal) ou des contributeurs ne peut pas être utilisé pour promouvoir des produits dérivés sans autorisation écrite préalable.
+    Exclusion de garantie : Ce programme est fourni "tel quel", sans garantie d'aucune sorte, implicite ou explicite.
+
+Pour plus de détails, consultez le fichier LICENSE.
 
