@@ -114,11 +114,11 @@ def log_event_from_database():
     Exemple de lecture des données depuis Realtime Database et envoi à Google Analytics.
     """
     try:
-        snapshot = realtime_db.child('/events').get()  # Chemin approprié dans votre base
+        snapshot = realtime_db.child('/events').get()  # Chemin
         if snapshot:
             for key, value in snapshot.items():
-                # Vérifiez si les données contiennent un utilisateur et un événement
-                user_id = value.get('user_mail', None)  # Ajusté à votre champ
+                # Vérifier si les données contiennent un utilisateur et un événement
+                user_id = value.get('user_mail', None)
                 event_name = value.get('event', None)
                 if user_id and event_name:
                     send_event(user_id, event_name, value)
@@ -144,7 +144,7 @@ def log_in(email, password, root):
         messagebox.showinfo("Success", f"Connection successful for {user.email} !")
         send_event(user.email, "user_login", {"method": "email", "debug_mode": True})
         write_data('/events/user_login', {'user_mail': user.email, 'event': 'user_login'})     
-        setup_ui2(root)  # Passer à l'interface principale (cette fonction doit être définie ailleurs)
+        setup_ui2(root)
     except Exception as e:
         messagebox.showerror("Error", f"Impossible to connect : {e}")
 
@@ -164,6 +164,7 @@ def open_link4():
     webbrowser.open_new("https://ivcam.fr.download.it/")
 
 # Scipts des exercices
+# Script Anatole ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 def code_analyse_posturale():
     # Initialize MediaPipe pose and drawing utilities
     global video_path
@@ -731,20 +732,19 @@ def code_enhanced_HS():
         out.release()
     cap.release()
     cv2.destroyAllWindows()
-
+# Fin de script Anatole--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 def code_upload_planche():
-    # Initialize MediaPipe pose and drawing utilities
-    # Initialize MediaPipe pose and drawing utilities
+    # Initialisation de mediapipe
     mp_drawing = mp.solutions.drawing_utils
     mp_pose = mp.solutions.pose
 
-    # Initialize global variables
+    # Initialisationn des variables globales
     global counter, stage, PR_rep, series_data, current_series, timer_started, start_time
     counter = 0
     stage = None
     PR_rep = 0
-    series_data = []  # List to store series and their repetitions
+    series_data = []  # Liste pour stocker les séries
     current_series = 1
     timer_started = False
     start_time = 0
@@ -752,7 +752,7 @@ def code_upload_planche():
     angle_data = []
 
     def save_to_excel():
-        """Save the series data to an Excel file."""  
+        """Sauver les données des séries dans un fichier excel."""  
         df = pd.DataFrame(angle_data, columns=['Time', 'left_knee_foot_hip_angle','left_knee_hip_shoulder_angle','right_knee_hip_shoulder_angle2','right_knee_foot_hip_angle2','left_shoulder_elbow_wrist_angle','right_shoulder_elbow_wrist_angle2'])
         file_path = 'output.xlsx'
         try:
@@ -1190,7 +1190,7 @@ def code_upload_fl():
                         counterBox.configure(text=f'{counter:.2f} s')  # Affichage du temps écoulé avec 2 chiffres après la virgule
                         if counter > PR_rep:
                             PR_rep = counter
-                        PRBox.configure(text=f'{PR_rep} s')  # Affichage du temps écoulé avec 2 chiffres après la virgule
+                        PRBox.configure(text=f'{PR_rep} s') 
 
     ########################################################################################################
     ########################################################################################################
@@ -1228,7 +1228,7 @@ def code_upload_fl():
                 out.write(image)
 
 
-            # Redimensionner l'image pour qu'elle corresponde au cadre tout en gardant les proportions
+            # Redimensionnement de l'image pour qu'elle corresponde au cadre de l'interface tout en gardant les proportions
             frame_width, frame_height = 480, 480 # Taille définie pour l'affichage
             height, width, _ = image.shape
             scale = min(frame_width / width, frame_height / height)
